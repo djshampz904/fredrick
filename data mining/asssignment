@@ -1,0 +1,83 @@
+Due date
+11:59 PM Friday Week 10
+Group work
+Procedure
+Find a data to explore
+Explore and find patterns using DM techniques
+AT LEAST one DM area and AT LEAST one DM algorithm
+Clustering with k-means, DBSCAN or/and hierarchical clustering
+ARM with apriori or FP-growth
+Classification with kNN, DT, NN, BN etc
+40% total
+30% Report
+10% Presentation for CP3403 or 10% survey for CP563
+
+30% Report (10-15 pages)
+Data complexity & preprocessing: 5%
+Relevance & appropriateness: 5%
+Readability & presentation: 5%
+Analysis of results and conclusion: 5%
+Scientific & technical quality: 5%
+Structure & organisation: 5%
+
+Algorithm
+Apriori or FP-growth
+Things to consider
+Ensure all attributes are nominal
+Ensure zero (or absence or negative or unimportant) value does not dominate the result
+Remove zeros
+Demo: BookClub
+Possible scenarios
+Explore how preprocessing affects the results and report
+NumericToBinary
+Discretize
+Explore multi-level (hierarchical ARM)
+Demo with the crime data
+
+Algorithm
+k-means & DBSCAN & Hierarchical
+Possible scenarios
+For a dataset with labels
+Explore how pre-processing affects the clustering results
+Demo: with the iris dataset (k-means vs. cfssubseteval vs. PCs)
+Explore how parameter tuning affects the clustering results
+Different number of seeds (the effect of seeds), different k
+For a dataset without labels
+We don’t know the number of k here
+Explore how to choose the best value k using the k-means for a chosen dataset
+Use the within cluster sum squared errors (might be k from 1 to 10)
+Draw a distribution when the errors drop suddenly
+Or explore the dataset to find any interesting patterns
+
+Algorithm
+1R, J48, Ibk, MultilayerPerceptron, SMO, NaïveBayes
+Things to consider
+Ensure the dataset has a label attribute
+Possible scenarios
+Explore how preprocessing affects the results and report
+How dimension reduction or attribution selection affects the results and classification efficiency for a certain classifier (or multiple classifiers)
+Compare and contrast classification accuracy with various classifiers to see which performs well for a certain dataset and you derive your justifications for why is that?
+
+
+ntroduction (1 page)
+Brief background
+Description on Dataset (1-2 pages)
+Details about the dataset including how many instances, attributes etc
+Preprocessing
+Details about the preprocessing done for the dataset including cleaning, transformation etc
+DM Area and DM Algorithm
+Brief introduction into DM area & algorithm of your choice and provide justifications for the choice
+Scenarios (Exploration of the Effect of k in k-means clustering)
+Explanation on what you are going to do in your DM project
+Results and Analysis
+Conclusion
+Reference
+
+Due date
+11:59 pm Friday Week 10
+Presentation
+In-class during Week 10 prac time
+What to submit? (through LearnJCU)
+Report & data
+Power point slide
+Scripts/codes you’ve written
