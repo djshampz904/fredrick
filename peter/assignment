@@ -1,0 +1,555 @@
+1
+CP5603 Assignment
+Due by Friday of Week 10 (no later than 5:00pm)
+Aim: This assignment is designed to improve your critical thinking and problem solving skills, as well
+as your information literacy skills (i.e. the ability to select and organise information and to communicate it
+effectively and ethically).
+Requirements, Method of Submission, and Marking Criteria:
+ Answer all of the following questions in a single document. Each question should begin on a new page.
+ Include your name on the first page.
+ Include list of references for each question with proper in-text citations.
+ For each of the first two (2) questions, write a report of approximately 750 words.
+ In your answer to questions 3 and 4 (i.e., cryptanalysis), show all your work. Note that using the Internet
+for deciphering the cryptogram and/or learning the key from any other sources is an instance of plagiarism.
+You have to show (step-by-step) how did you achieve the plaintext and key.
+ Marking criteria is given after each question.
+ Upload your solution to the Assignment Box, located in the subject’s site.
+1. Diffie-Hellman Research
+How does Diffie-Hellman key exchange protocol works? Use the Internet to research this key-exchange
+protocol. Explain the man-in-the-middle attack and provide a numerical example that shows how the
+‘man-in-the-middle’ attack works in this protocol.
+[3 marks]
+Marking Criteria:
+ 1 mark for clear description of the protocol, with a numerical example.
+ 2 marks for demonstration of the man-in-the-middle attack and providing a numerical example
+2. You are employed to design a database management system for the personnel of XYZ company. You
+have involved the client in the design, informing the CEO, the director of computing, and the director of
+personnel about the progress of the system. After gathering user/system requirements it is now time to
+make decision about the kind and degree of security to build the system.You have described several options
+to the client. Because the system is going to cost more than previously planned, the client decides to opt
+for a less secure system. You believe that the information will be stored by the company is extremely
+sensitive (i.e., it will include performance evaluations, medical records for filing insurance claims, salaries,
+and so forth), and thus, requires a reasonable level of security.
+With weak security, employees working on client machines may be able to figure out ways to gain access
+to this data, not to mention the possibility of online access from hackers. You feel strongly that the
+system should be more secure. You have tried to explain the risk, but the CEO, director of computing
+and director of personnel all agree that less security will do.
+2
+What should you do? Should you refuse to build the system as they request? Discuss the ethical issues
+in this case study. You should be able to make some recommendations as to how this ethical problem
+may be resolved. Be sure to support any recommendation with reasons informed by your research and
+analysis of the ethical issues identified in your discussion. More precisely:
+(a) What code of ethics, as set by the ACS (Australian Computer Society), are in direct confrontation
+with the attitudes of the CEO and directors?
+[2 marks]
+(b) If opting for the less secure system is a must, how do you avoid or lessen the repercussion of a security
+violation in the future (from both reputational and legal implication points of view).
+[2 marks]
+Marking Criteria:
+(a) 0.5 mark for each of the 4 clauses (Hint: see ’The Primacy of the Public Interest’, and ’The Enhancement of Quality of Life’ code of ethics)
+(b) Answers will be different from student to student, but should include software/system development,
+and communication with all stakeholders (i.e., employees, CEO, and directors).
+3. Cryptanalysis of Substitution Ciphers:
+In this question you learn a classical monoalphabetic (substitution) cryptographic system, and are required
+to cryptanalysis a given cryptogram.
+In substitution ciphers, a permutation of the alphabet is chosen as the cryptogram of original alphabet.
+That is, every letter of the plaintext substitutes by corresponding letter in the permuted alphabet. For
+example,
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+c o d k s z r g e l u y a f m v p h i n w t b j q x
+Figure 1: A possible permutation of English alphabet
+is one of such permutation, in which letters a, b, c, · · · , y, z from the plaintext are substituted by corresponding letters c, o, d, · · · , q, x respectively. Since remembering permutation is not easy, one may employ
+a keyword and use a table to generate the permuted alphabet. Let CRYPTOGRAPHY be the keyword.
+The permuted alphabet can be obtained as follows.
+ Choose a 6 × 5 table/matrix, i.e., a table with 6 rows and 5 columns.
+Write down the secret keyword in cells (1, 1), (1, 2), · · · , one letter in each cell, but skip repeated
+letters. Figure 2 shows how ‘CRYPTOGRAPHY’ (as a keyword) written down in the table.
+ Write alphabet letters (in order) from the first available cell after keyword, but skip all letters that
+are already written in the table. You will come out with Table 3.
+The permuted alphabet, which will be used to generate the cryptogram, can be obtained by simply
+reading the content of Table 3 in columns order (Which gives you the cryptogram alphabet of Figure
+1).
+3
+C R Y P T
+O G A H
+Figure 2: CRYPTOGRAPHY is the Keyword
+C R Y P T
+O G A H B
+D E F I J
+K L M N Q
+S U V W X
+Z
+Figure 3: Table for permuting alphabet
+Your Task:
+Cryptanalysis of an information system is the study of mathematical techniques for attempting to defeat
+information security services.
+A cryptographic system is said to be breakable if a third party (i.e., cryptanalyst), without prior knowledge
+of the key, can systematically recover plaintext from corresponding ciphertext within an appropriate time
+frame.
+In this question, you are required to determine the plaintext and the keyword associated to the given
+cryptogram. Note that brute force attack (i.e., searching all possible keys) in order to find the keyword is
+not efficient. However, letter frequency attack and redundancy in natural languages are efficient tools for
+breaking substitution ciphers.
+In the following you can find 10 cryptograms, where the breaks are genuine breaks between English words.
+You are required to decipher the cryptogram that matches with your Student-ID.
+[6 marks]
+Marking Criteria:
+ 1 mark for showing the intermediate result of cryptanalyzing (i.e., when about half of the letters in
+the alphabet is determined).
+ 1 marks for determination of the cryptogram alphabet.
+ 2 marks for obtaining the 6x5 table associated with the cryptogram alphabet (see Figure 3).
+ 2 marks for determination of the keyword, and the plaintext.
+Not that determination of the keyword/plaintext from incorrect results in previous steps is not acceptable.
+4
+Cryptogram for whom their Student-ID is XXXXXXX0
+vehmdrt-uts (dnkq gdnnto ksbbtrehg) gesvrqkskrtbk wkt
+rct kdbt ktgetr uts zqe tjgesvrhqj djo otgesvrhqj.
+dnrcqwyc rct tjgesvrhqj djo otgesvrhqj utsk oq jqr
+jtto rq it hotjrhgdn, rct ujqfntoyt qz qjt qz rctb
+kwzzhgtk rq qirdhj rct qrcte. vwinhg-uts (dnkq gdnnto
+dksbbtrehg) gesvrqkskrtbk wkt d ohzztetjr uts zqe
+tjgesvrhqj djo otgesvrhqj. rct ujqfntoyt qz qjt uts,
+cqftmte, oqtk jqr dnnqf rct qrcte rq it otrtebhjto.
+Cryptogram for whom their Student-ID is XXXXXXX1
+gq dtj mxgfvrs cutrgyul qatq qau tjjxbwqgph pz th gehpcthq
+tqqtfvuc dtj hpq cutrgjqgf. bpjq utcrs uxcpwuth fcswqpjsjqubj
+ducu lujgehul qp dgqajqthl qau tqqtfvj pz ulxftqul pwwphuhqj
+dap vhud qau uhfcswqgph wcpfujj, nxq lgl hpq vhpd qau
+fcswqpectwagf vus. tllgqgphtrrs, gq dtj cumxujqul qatq qau
+uhfcswqgph thl lufcswqgph wcpfujjuj fpxrl nu lphu mxgfvrs,
+xjxtrrs ns athl, pc dgqa qau tgl pz bufathgftr luigfuj jxfa
+tj qau fgwauc lgjv ghiuhqul ns ruph ntqqgjt trnucqg.
+Cryptogram for whom their Student-ID is XXXXXXX2
+jupiini, hi uhj jtahipo fnbv, ophl qut qutnbtqhgpo
+znxilpqhnij nz anltbi gbswqnrbpwus. ut xjtl hiznbapqhni
+qutnbs qn piposjt ghwutbj pil gnijhltbtl qut jn-gpootl
+wbnlxgq ghwutbj, fuhgu xjt japoo jxdjqhqxqhni dnktj
+gniitgqtl ds opbrtb wtbaxqpqhni dnktj. jxdjqhqxqhni dnktj,
+pojn gpootl j-dnktj, pbt gniqbnootl ds p btopqhetos junbq
+gbswqnrbpwuhg vts qn wbnehlt gnizxjhni (dtgpxjt nz qut
+xivinfi jtgbtq vts).
+Cryptogram for whom their Student-ID is XXXXXXX3
+fi phfj wswub, cu lfjdxjj judxbfpq, pbxjp, sil lujfti fjjxuj doipbsjpfit
+phu lfzzubuiduj gupcuui nsbfoxj sxdpfoi pqwuj.
+cu cfrr jhoc phsp woob lujfti zob si urudpboifd sxdpfoi gbusdhuj phu
+judxbfpq oz phu jqjpua sil lutbsluj fpj wbsdpfdsrfpq --io asppub hoc
+judxbu uzzfdfuip sbu phu gxfrlfit grodvj oz si urudpboifd sxdpfoi.
+zxbphubaobu, cu lfjdxjj s jup oz buexfbuauipj zob wbsdpfdsr
+sil judxbu urudpboifd sxdpfoij (iopu phsp srr ukfjpfit fipubiup sxdpfoi
+jfpuj hsnu io judxbfpq --iufphub zob phu gflj iob zob phu gfllubj-- sil
+pbxjp fj zxrrq wrsdul fi phu sxdpfoiuub, chfdh fj iop sdduwpsgru zboa
+bujusbdh wofipj oz nfuc).
+5
+Cryptogram for whom their Student-ID is XXXXXXX4
+qat lnqn tigdswqhpi jqnilndl (ltj) fnj qat zhdjq
+gpcctdghnm-udnlt cpltdi gdswqpudnwahg nmupdhqac fhqa
+pwtims nil zxmms jwtghzhtl hcwmtctiqnqhpi ltqnhmj.
+hq fnj ltetmpwtl zdpc mxghztd nil etds jppi rtgnct n
+jqnilndl zpd tigdswqhpi hi rnivhiu nil pqatd ipi-chmhqnds
+nwwmhgnqhpij. hq xjtj qat jnct zthjqtm jqdxgqxdt
+fhqa japdqtd 64-rhq lnqn rmpgvj nil n japdqtd 64-rhq vts.
+Cryptogram for whom their Student-ID is XXXXXXX5
+cxfognhi fch eq fuciigzgqk cffnbkghl on orq hxaeqb nz iquuqbi chk orq
+achhqb ep drgfr egkkqbi ixeago egki.
+ch cxfognh orco rci nhup nhq iquuqb chk achp expqbi
+gi bqzqbbqk on ci c ighluq cxfognh.
+ch cxfognh dgor achp iquuqbi chk achp expqbi
+g.q., c iqfxbgogqi acbvqo) gi bqzqbbqk on ci c knxeuq cxfognh.
+egkkghl gh ch cxfognh fch opwgfcuup eq nz odn opwqi: iqcuqk nb nwqh.
+gh c iqcuqk egk cxfognh, iqfbqo egki hno vhndh on orq norqb
+egkkqbi cbq ixeagooqk on orq cxfognhqqb.
+nhfq orq egkkghl wqbgnk funiqi, orq egki cbq nwqhqk chk orq dghhqb gi
+kqoqbaghqk cffnbkghl on inaq
+wxeugfup vhndh bxuq (q.l., orq rglrqio egkkqb dghi).
+gh ch {\qa nwqh egk} cxfognh, egki cbq vhndh on cuu wcbogfgwchoi
+orbnxlrnxo chk czoqb orq egkkghl wqbgnk funiqi.
+Cryptogram for whom their Student-ID is XXXXXXX6
+seu ulwudhujgu fhse seu cjcmtkhk rz seu puk ociu icmxcnmu
+hjkhoesk hjsr seu pukhoj wdrwudshuk rz gdtwsrodcwehg cmordhseak.
+carjoks seu acjt pukgujpcjsk rz seu puk, ferku ksdxgsxdu
+fck nckup rj zuhksum wudaxscshrj, cdu seu qcwcjuku zcks
+ujgdtwshrj cmordhsea (zucm) cjp seu cxksdcmhcj mrvh cmordhsea.
+Cryptogram for whom their Student-ID is XXXXXXX7
+ij 1976 pizziu cjp bummecj ijsfrpxhup sbu hrjhuws rz
+wxdmih-vut hftwsrktksuek. wxdmih-vut hftwsrktksuek
+(cmkr hcmmup ckteeusfih ktksuek) xku sgr pizzufujs vutk;
+rju ik wxdmih gbimu sbu rsbuf ik vuws kuhfus. hmucfmt,
+is ik fuaxifup sbcs hrewxsijo sbu kuhfus vut zfre sbu
+wxdmih rju bck sr du ijsfchscdmu. ij 1978 sbfuu pukiojk
+dckup rj sbu jrsirj rz wxdmih-vut ktksuek gufu wxdmikbup.
+6
+Cryptogram for whom their Student-ID is XXXXXXX8
+bftuhq, hornfb rgk rklunrg hopcuk opc qou zrdqpbfhrqfpg
+wbpilun dpxlk iu xhuk qp dpghqbxdq r wxilfd-vus
+dbswqphshqun (qofh fh qou cull-vgpcg bhr dbswqphshqun).
+nubvlu rgk oullnrg xhuk qou vgrwhrdv wbpilun fg qoufb
+dpghqbxdqfpg. ndulfudu ixflq r hshqun cofdo rwwlfuk
+ubbpb dpbbudqfge dpkuh. lrqub fg 1985, ulernrl kuhfeguk
+r wxilfd-vus dbswqphshqun xhfge qou kfhdbuqu lperbfqon
+wbpilun. nfllub rgk vpilfqy hxeeuhquk xhfge ullfwqfd
+dxbtuh qp kuhfeg wxilfd-vus dbswqphshqunh.
+Cryptogram for whom their Student-ID is XXXXXXX9
+tigcsvqhpi hj qat vchbhqhet gcsvqplcfvahg pvtcfqhpi
+xjtm qp tijxct jtgctgs pc gpizhmtiqhfohqs pz hizpcbfqhpi
+qcfijbhqqtm fgcpjj fi xijtgxctm gpbbxihgfqhpi gafiito.
+qat tigcsvqhpi pvtcfqhpi qfutj f vhtgt pz hizpcbfqhpi,
+fojp gfootm btjjflt pc vofhiqtkq, fim qcfijzpcbj
+hq hiqp f gcsvqplcfb pc ghvatcqtkq xjhil f jtgctq
+gcsvqplcfvahg uts. mtgcsvqhpi hj qat ctetcjt pvtcfqhpi
+qp tigcsvqhpi. qat ctgthetc dap apomj qat gpcctgq jtgctq
+uts gfi ctgpetc qat btjjflt (vofhiqtkq) zcpb qat
+gcsvqplcfb (ghvatcqtkq).
+4. Cryptanalysis of a Polyalphabetic Cipher:
+In this question you learn a classical polyalphabetic substitution cipher (known as Vigen´ere cipher), and
+are required to cryptanalysis a given cryptogram.
+Cryptanalysis of an information system is the study of mathematical techniques for attempting to defeat
+information security services. A cryptographic system is said to be breakable if a third party (i.e., cryptanalyst), without prior knowledge of the key, can systematically recover plaintext from corresponding
+ciphertext within an appropriate time frame.
+Background
+Julius Caesar used a cipher which moved each letter of the alphabet to the letter three to the left in
+the predetermined order of the letters of the alphabet. Figure 4 shows original English alphabet and
+corresponding cryptogram alphabet in Caesar cipher:
+a b c d e f g h i j k l m n o p q r s t u v w x y z
+d e f g h i j k l m n o p q r s t u v w x y z a b c
+Figure 4: English alphabet letter and their corresponding cryptograms in the Caesar cipher
+In order to use mathematical notations, let convert letters of the alphabet to integers. The most natural
+conversion is to assign to each letter an integer which indicates the position of the letter in the alphabet.
+That is, assign 0, 1, · · · , 24, 25 to a, b, · · · , y, z, respectively. Using this conversion, Caesar cipher can be
+expressed as:
+C = Ek(M) = M + 3 (mod 26)
+7
+where ‘C’ is the cryptogram, ‘E’ is the encryption algorithm, ‘k’ is the key, ‘M’ is the message/plaintext
+(one may replace integer 3 by letter ‘d’).
+Caesar cipher is from the family of shift ciphers, in which the cryptogram is a shifted version of the
+original alphabet. Cryptanalysis of the Caesar (and all shift ciphers) is easy, because there are 26 possible
+keys/shift.
+Vigen´ere Cipher
+In Vigen´ere cipher the key is more than one letter. That is, Vigen´ere cipher can be considered as a
+combination of n shift ciphers, where n is the key-length (i.e., the number of letters in the keyword). Let
+the message/plaintext be ‘individual character’ and the keyword is ‘host’. Vigen´ere cipher encrypts the
+message as follows:
+Plaintext i n d i v i d u a l c h a r a c t e r
+Keyword h o s t h o s t h o s t h o s t h o s
+Cryptogram p b v b c w v n h z u a h f s v a s j
+That is, the first four letters of cryptogram computed as:
+‘i’ + ‘h’ = 8 + 7 = 15 (mod 26) i.e., p
+‘n’ + ‘o’ = 13 + 14 = 1 (mod 26) i.e., b
+‘d’ + ‘s’ = 3 + 18 = 21 (mod 26) i.e., v
+‘i’ + ‘t’ = 8 + 19 = 1 (mod 26) i.e., b
+Since the plaintext is longer than the keyword, keyword is repeated till all letters of the plaintext are
+encrypted. As it can be seen, a particular letter of the plaintext may be encrypted with different letters
+from the keyword. For example, the first occurrence of letter ‘i’ from the plaintext is encrypted with
+‘h’, where its second and third occurrences are encrypted with letters ‘t’, and ‘o’ respectively. That is,
+Vigen´ere cipher is a polyalphabetic substitution cipher.
+To break a polyalphabetic substitution cipher, the cryptanalyst must first determine the key-length of the
+cipher. This can be done using Kassiski method. The Kassiski method uses repetitions of patterns in the
+ciphertext in order to get a good guess about the keylength. For example, suppose the plaintext ‘to be or
+not to be’ has been enciphered using the key ‘now’, producing the ciphertext below:
+Plaintext t o b e o r n o t t o b e
+Keyword n o w n o w n o w n o w n
+Cryptogram g c x r c n a c p g c x r
+In this cryptogram (i.e., g c x r c n a c p g c x r) a repeated pattern is g c x r, where the distance
+between these repetitions (i.e., the number of characters from the first letter of the pattern in its first
+occurrence to the first letter of its second occurrence) is 9. This could be the sign in which the same
+letters from plaintext is encrypted with the same letters from the keyword. Since in Vigen´ere cipher the
+keyword is repeated, the key-length is probably 9 or a divisor of 9 (i.e., 3, because 9 has no other divisor).
+Assuming that the key length is 3, we split the cryptogram into three cryptogram. That is, the 1st, 4th,
+7th, ... characters of the cryptogram are the result of encrypting the 1st, 4th, 7th, ... characters of the
+plaintext with the first letter of the keyword (in other word, they are shifted with the same number, as
+in the Caesar cipher). Similarly, the 2nd, 5th, 8th, ... characters are the result of encrypting the corresponding letters in the plaintext with the second letter of the key. and the same for the third file. That
+is, this Vigen´ere cipher is a combination of 3 Caesar ciphers, where the cryptogram of each Caesar cipher
+is given as below:
+Cryptogram 1: g r a g r
+Cryptogram 2: c c c c
+Cryptogram 3: x n p r
+In order to break each of these Caesar ciphers, we use the letter frequency in the English text. As it is
+8
+Figure 5: Letter frequency in English texts
+shown in Figure 5, ’e’ is the most common letter in English texts. That is:
+In Cryptogram 1, we can guess that either ’g’ or ’r’ could be the corresponding letter to ’e’ in the plaintext.
+If ’g’ corresponds to ’e’, then the first letter of the key should be rg
+r −r
+e
+r = 6 − 4 = 2, which is ’c’.
+If ’r’ corresponds to ’e’, then the first letter of the key should be r
+r
+r −r
+e
+r = 17 − 4 = 13, which is ’n’.
+In Cryptogram 2, we can guess that ’c’ is the corresponding letter to ’e’ in the plaintext.
+If ’g’ corresponds to ’e’, then the first letter of the key should be r
+c
+r −r
+e
+r = 2 − 4 = −2 = 24 (calculation
+mod 26), which is ’y’.
+In Cryptogram 3, each character is appeared only once, and thus letter frequency does not work.
+Remark: This example is just to show the mechanism of the Kassiski attack. This attack is very effective
+for large cryptograms (e.g., in the size of cryptograms given in this assignment).
+Your Task:
+In the following you can find 10 cryptograms, that are created by Vigen´ere cipher, where the plaintext is
+English text and the keyword is a meaningful English word. You are required to decipher the cryptogram
+that matches with your Student-ID.
+[7 marks]
+9
+Marking Criteria:
+ 1 mark for determination of at least two patterns of length no less than 3 characters.
+ 1 mark for determination of the distances between the appearances of the patterns founded in the previous
+step (highlight the patters in the text/cryptogram).
+ 1 mark for obtaining the key-length, i.e., the greatest common divisor of all the distances you computed
+in the previous step.
+ 1 mark for separation of the cryptogram into ‘k’ cryptograms, where ‘k’ is the key-length computed in
+the previous step.
+ 2 marks for the determination of the keyword, with proper justification for each letter of the keyword
+(i.e., applying letter frequency).
+ 1 mark for deciphering the cryptogram and obtaining the correct and readable plaintext.
+Not that determination of the keyword/plaintext from incorrect results in previous steps is not acceptable.
+10
+Cryptogram for whom their Student-ID is XXXXXXX0
+pgbuwtelpmtgbcoptgrnszvkruvnbkdhqcwvdwpwakhbphbqelpemeivjolggmgcwopwpc
+zwenbfkvxiopmtpgbwqexivdiwrnjzvgtlntojicoqtwthdpbjtuvnbkdhqcwetyetvihc
+olucchfcqpriodquiyoeekibusmcjwutwpgompahdlfiioeffepgpodeqqcyfcukvbunpq
+dmfewdaidvjksmjyaggnglsgqcedavtumaiabyoeargigttgqceomthiqpvutumpldxxta
+zkdluzbjtqjyvggxfemtbcolbkdhqsiutislecgxusmkiynewudgfzvgdnipzvwuoepgay
+htbkbuupekchfcnwgnipzodlfepggynlggmctekqafvdqqcvfeegthusmcjwutwptyslvf
+hinpwhibfmqfsysdakbcmlzvdmittnxhhtvithfcinpfmdkjtgfdkccvfntchmjqqgsudn
+wtscorbqwixepgnxfltyxniepkhjszjntgxppckyjompicgtmfibfqwnaixtviilvdbodx
+fwacjwutwptysezwhnusquxmusmgpmjpavpheepgbitecppwdpxvpvmpaqaoutwpibfepg
+elpmtgbcoqieinipejdffazqqffxavtgtqzqbqipbjtlusmcjwutwptysswptmuwghdfmz
+euibfazqiidztqghpeiuhontviibbebjtuvnbkdhfpzkhuuccuiqpcbjnbphmxtltztxtm
+nlvagympdccnqcwdayndmihydfzkisbywpngjeggiwusquxmxsgcaffiquicorqpiysymv
+podeqqcmjemuuomwgvgotebjtuvnbkdhfpz
+Cryptogram for whom their Student-ID is XXXXXXX1
+mpisztfebocvdygdslkskoqxzasvilfwfzekfivcxaqsvxhxdaenxaqrvmibheidsvamde
+rboakomgeetbivkvzkegunjogndetregzecliyarvkrroodwygucrdmhzowwileaxowmmk
+vctemcvlsmttyowxzdvbegprvmibheiwylfeomltzgvdlxeetbimwepfmtmsvmykqcykrg
+qlkrilqclbivtaexieoaelibypcoqxztvnylunxkqxesvxkxdoikvxsijdikqddkmemfko
+vxjcykrzunxdlxwepdlxeeenikoaecieqckkqxesrqitbpcixaqeemvrbtzyrtxgfbmmtm
+rxhwusgkxvttyogkkpkykkmmkrvhggydlxunjogndetregzecdlxdetomoqrnrsdzoncxa
+qsvmvxfkviokqcioemqskrifqsjkkxrrfwxaqciitmagikqbzpisztfebocvdygdslksko
+qlnokrigorpzxbanrxhwqciitmuoeuireaiowxorvdegpezdlxdtyowtyefbxaqkeyaeqd
+xosyanvyjmtedswlgfwsgbqnkdswqtvbqbzekrihfhvbxauszcaakpisztfebocvdygdsl
+kskoqlmrvkplacrvpxpspwqxfrzmjhdeokqixeuowwqciitmuoeswbpeedmvmlkyhxeeem
+vrbtzyrugtkridqyjmlxpucomldemovlqdkrifmienvtibrmohragzprunxktkuvrdidqy
+tbcifojiwmqmzcxamtzdvxcuzbilfhvzvbartyqfgnzmemuoeyjmtebocdnekgixzsvxhx
+daenvxoezfikgszxkteetevxohrxrxxbvpskqaeigkkpkykkmmzcxkmnjwmmfeudlxudvk
+fxtieneigbcsgdqytbcifojiwmqmjswmtaksxfugydfxbojcmuxekyhxeixxelkskoqmta
+kewxetnyhbrfvbigfkviwyarvxgkkpkssgmnunivdygdmhztyoogawcohzqowyrxafkril
+qkviwaawvfikyujdrhfbvcyyritsigfcfwtnfakssgmlcixhpekovfunvdlxatyovaqnto
+sgqowdlxwepcgtzbvwewqpllpbobpzyuxijrmgsiksrtpiiogmarpdltfijglxdekrimqr
+dzyuxituiroodowydoddlxmdmkrmmgvyjtbusvmvwepmvrbtfcclfedswmtaksjmtevxgk
+kpkssgwepswfmdvzyuxitdlxzaeisgqcrxylqtyotnnlzmoxktfcigpaeorvdygdiwyejc
+ezqwzdlhgtrzvbartyqfgnzmemuoeyjmtefdlxdkvixaqonxikafkrilqcioxdqyzcxaqo
+evciqrjyrmtakmegpetbciftyogkkpkykkmmlcmgstyowxorvdoxkacdlhggyktixyzxkt
+busvmvwepmvrbtfcclfednsxenfdvxcuzbiidifbghymlxmvmtzyrmatikrlyikkwxorvd
+oxkbvdaxqnkgsimrksilafkrilkskoqmteioqnetsoemdujdiwbusvmvdexswmdynrmmqp
+rqilfhrdoxqpjkrnbtfnemqlzcxhracvevfimotnnlzmoxkspcxxysrxigfrpyrmtecswm
+tajdsbzccehxfhvxefqowdlxdetomoqrjkphzgnsxafhvsvhdixsrtxpllpbokviwmteck
+gdafrbizuskbctxlfgwtzakdevweisrlfernsynrvkobzgkriigbcsgdqytbcifojiwmqm
+kywxfugrmlawecclfedkrwfrpdsvanmsrvqsvxhxdskremfhvcclfedswlamvyrxqljowm
+tijswvmlcohfmsheikmdzxktftrmomteeyxbanfptnnlzmoxkciitmagiktakwrcmgfrfn
+yvqdsihbrfzoegphvvpfmnkrirpijmyleeudlxehfbxvamzxklafgbmomtvuirorpzxhey
+jdifeaenmgfrfnyvqdkgsgavvveibrfkgaqstkpeqdgefeucbocvdygdslkskoqlmnuzyu
+xituirpijdvbnukssgeyjdifetfcseheioptfeuzvhnlvww
+11
+Cryptogram for whom their Student-ID is XXXXXXX2
+pjwhauftexrnclttvhbuapimqouvwvqhbqthjivavathydtkmnfjdagvgvxvpckxekvkjx
+bvxzwmbcuwrnoxpjyumutgvyvmflttyuqvrbvevctxhrrgmhyxtmhverdeivagvjimwgva
+tjifctbipqhiungvgdvdxtotumultufbbjxclqemthuzrwmnexxiqbintjwhavapkeqcpt
+jklrzkltuwhbyhjchkixxifqdsgbcfvgmtmdyeymczjrvdvvxtfjgmvxgdmqqpziyivmek
+tkxzwvrevwrnuxrlvlbaapmiemggszwfcultumqbjxazxhzcmjiirnuxriiwajtgzrjaea
+tdivagvgvxvpckxekvkjxbvwzqvajegrvfbizsqinlttyuqvriymvugtcjxkivmwvwhkwk
+xkcrnvatjcvbgfxjmqlgitehhvvhuklhbkftrrgzgldlvfmutkrmoidetksdvahegsqmpm
+lyslavknzrjbqbckiungktnmwpvatgvrkgwjiivmektkwkitbcxwfpgftnmwpehcumwqqg
+pcwhkwkxkcwpklbveqavapkxkmuxrlvlbahuklhaalivqumnbtjsqbjxszjiqenakcrneh
+bgywqpzhfqhlkyuzgxtvigffomolifwwcfrdehlnhbrlpwxthqcipauxtrwhktxijldzkg
+vjgkmoxxjthzhxrkmibjxeiseidbazxbwhtclrdcvadimvmfltksixckizglxcgijfhqpz
+psphbqwtkiuukgtklhagvgvxlaphqvxwmtmwrrwpcmdweqwwmhzhhzcgsklhzgydiilaph
+qvxwmtmwrrjcglhzrjbjxhvgumvmwvfdakvifsoqplilhbqpzhvgumerxjxkmphizsqwhx
+ckvrxatrfrfmrmxexuwfnrvheguaperrvggiissgetcsiwpqnvyxrnclpdewpgfpkmfinf
+trwxzghuzriwtfpkmrvqkjeghzvtxexbipwxjgrurnivhdacyjegwqqgdweszqupsmoqvr
+szwwzkujkmrvnxirvdvfhbmeuqcuavowimxdeeiqpbivwhbqykrpxmutrtsulkgvksdxth
+qrfltkmnumvbtbqlxlwpigffnbjxjeghzvtxexbidhjkxkmkgufvpivbdekdqpxsscdvgo
+texzpkvwkenmuiarghievdihlvimdumvbtbqlxlwpigffnquvpcphlvatvrwzqinfjnipw
+xjhhvqmtufbpmmwvjrzotauiiqpbizsqwhxckvrxabhrwiwnednwvcridjinqutgrrgwoo
+pimdjnxlymfpvtzvwrvcyxemwmuxifjyinntjefkqkszrjbqteiseidbazxblkliimecvb
+detuwddiyiqbjxtexuwrrdwxkquigffdjkexkcgqumgzfxbkhczwgmhbcvhegvatwsotqp
+xekiwtfjce
+Cryptogram for whom their Student-ID is XXXXXXX3
+wpwhiddreapagmwtapyklkmyghwjdtkgwmjlbqiisdvngtydwfbjqhaudcuvcgfvcfhijy
+hitkfalbjafgmkwjwwhxguowcvdwrbzgloavmsdcvvhzuchtwluhglkgqilgxfgqzwrova
+dbaqhgffmsdcvvhzzcmkmeuavnwvdjafnzwbumunfgwjwcvdwwwjgjmvlilgbsnlvyouvw
+lbxqlwpduhnyaxdjafxwjzqfuufvgwwuhglzifvnghdgljyqelozvxwfbbzcnlzhgkwvea
+wbwfnzweqvrotdlknglaxlitkfalbbzglwexaldyhmetaefqsyianutdhqfhijedbaqhtq
+zpaebsdoxstnawvkspvwnhzahcwvdazcpafjkgtlwuwtqhiddrewfnzwdcuvcgfszgviug
+obzkmkzrcdfcfuocvgynagmfeygxumykmljdbaqhtaglapasfgxjqixgieaphwjowkgljg
+eckvhwkvbzgumuwqgpjjgfmkugmkwvgvvwsinwenwvegappsdlltkxkfrztajsjwqukjsf
+wafqnxgotgycfywpwcoullwfrlglrkgnwgjumuvfqsqwfagalbbzgvavgmjdcvjhtsvcgf
+vpargmkwjweifuhidgxkgwpsvhgtllvglusqjwcmkgfqsvyvolbzvbwtllljyqkxjeknlz
+laauixlhvvqhwtbqkuoafjjafxwjveavbshvmmfifqpbzcnlzhguchmkhbguotelbtkxkg
+wpwtukhhkluixsqwfagalbzwnulwwwojylzhzljyavhvlknqgibzgqafqmjkmjwymsnyvs
+qllqqzgpngtypspxdgmzgxtvvbwsxklkifwhzdgujfwpwycffhzkkxwfwqlaufvrzljyoa
+qvapahjlkwqlkzrcdfifdbbzgmwdomjmhgowpau
+12
+Cryptogram for whom their Student-ID is XXXXXXX4
+iysmmdvtjsqmueazgnchwxehcmlqecshmqxpkwjvrjpesanlgxvboahggvhnpdvxeunkki
+bvohwqkiysnmsegrazbhvhrfzbkiifhvtvmovcaakegvgbmqigrhzllriysngvxtdhcmws
+irznqcidwgciuihjhjzhhqpdvzwmrzdvvwwiysowweajwumrjrfahcqmrrhdwqwxehcmvc
+hkshiqhiyspxsigrbytratipjcqhhfbophvperjuqihjfzyxmgvrwgwltusvthvifgzbxt
+pjsxzhxhyomqqkhtvzuhxwvajawwilrdmgqtrgpzhsuvtaqfmteqtnrvpjsxzhxhyomqqk
+htvzuhmhkvzipsjehjnvxdiobmqitusybrwiffzbkihyommvlteqzbkitwtdklictmjnvi
+risoakegzbbafltdsnkdrqvazivygvrwgwltzfdvisgdooqrrgrhziqhpmsmijixetjzpe
+izcizdxtrgzkuiijvvzlrvjqcmpixjwymdpxwhcmoicxhcwixwvgciuipjgdoqiskczifl
+erfoqfmerboqvxwvgvuhehkvzthrvkvjnwltjsxzhxqvbvtrlpergmlgwksmakslvropdx
+xkwnvrxpckvgvtdjgdjoiifqjvvxglqoiqmsvogafltdsawuecrfwqwvpimvkfihjgozxg
+ilfzaxfhvepmqxifpzvdpdyzzqflivfnzhwjchnmyigrzvcwldigrwuotuciqptgfjdvjx
+wvsanlgxvbxgrjhlqcafltdsniqhgvrpklrvkvzaldtftophwwrfzajmkvbowsegkwxqse
+ckgdblwrcsvzwlpkhcmlruffhiwmdefvbhgpebzdhvqvummdxtihciqxwvoqmuevvwinrv
+brhdwqvpkszdhvnjsxzhxhyomqqkhtvzuhvthidzhwhfazxxfazqdvisgdooqrrxehcmis
+gdcabkisvgxzltizciwixwvgtawibrbyqwwerfvuhxtigophebfiibrjiywnxxfazqdvis
+gdooqrrxjbjbxwtuonipipjimmrjiyskmujdiavvfidwhcmvchkshadwnvhnwpihpgompw
+wrjzcwmazgzlhbiiokcepxtwinrvbrhdwqecucmjuspuqvawqtjgvohwifoxplikvcophv
+vfogaisgvlvusptcodpdrsszpvgswrjzcvisgiwtlgxetjzpeizcibrgdegozxgiumiipm
+rjsxzhxhyomqqkhtvzuhwlywxpdvtjwhqoegkcnqpqdegkzhtdjwoqrrtugzkuiijvvzlr
+vjqcmpixeoygqebzqnmfvtkgciumcxgxphqtkvzlheavfcivxwvtziwygvcajhmcxowthx
+drqoqyeivhcmdgrvgnawvjthpzhfnjsillrvrzgxdvizqdxdrijhcmvebvpmwdhrrgouhw
+hruzvrxtkvvbeiuffzahrszbbbkmhsfjiggpjhhmvwpxsophtpihdkltpehnakegvgvzhr
+dkgpnimrzsibwsgvqjdhviysnmfvtk
+13
+Cryptogram for whom their Student-ID is XXXXXXX5
+mdiakaywdvxemhxmxhnwdtmlyshaeilxvtkymizokxbnlnyewigilxlxeummicrfmlyhka
+kimxqaliwghtlluglnzwwwhmxmmqdsxhicwhxemhxmixcdqtaenikewiuahrvehiuagwgx
+wtaimwdrxwjglvtxyabhhaykhrbjuhhcnvyrkagryagoxwhdweqmmirrmlyghilejdvsbf
+caltrxbpwtaixtdlxvchgillichsmxbtqtailtlstrytgthtldyiwiwtuttmhibausoiwh
+xhchwrbfoihdllughsvligjoehqpvsxvgxfaemucgapilqxcamhiuowywtgtaiptuiymuq
+llbxseuoupybrfliwghtlluglnzwwwhmxwucgpksjdvewehxqtxvurwioijgrthgiawols
+fkhtammeuoupyboamiluhlwqucsrhtihhdtriclnmilpftbzyhrlnxcdqvxvculaupyhhc
+kinhkakmhvvcaigtvhtzyqhegxbtvuunyrwoymhkhsmmapwihrvnveoilpoanxbdusgsnt
+whtxuaotaimtyekmzxdbeimtfrxxmwdrbrahfhxqyhdlesqikeashtvtielilcbtucwsms
+ycvukinwdtmlyxusaeltvakiwdurxgnpqdmlohlnmlyhhckinghchrmiuuvxcdqpaemtwh
+xcqxolkiwdyekxbtrrbkccdlliwghtlxusoektldsolixpsuupcroyoilxiitfftvevvyi
+vhtvccjsvlybhigabxfhgsndqlrxbtsakxcrlptrnheumefhragsoiviwilrdnoilxiyml
+uiwhxwbpueleltfokvyrwlrhchwrbfoihdfiusrwlmhiuowywtgtaijgrbeigdisxxnxqg
+ntmwdrxhmtfrxxmrkefimxqtaiuqveggydiamvohwewoyngilxlxeummicfegxltrnxeje
+uotgbdihxvmrkefibdzeoilghlbimdqtaiocfoghcilogefiuulxqdutamhtvshjuqoavo
+vdawamwwvekzyhlnipurhoyxbtgetpygwhxsnwhrttjgravlqduklaciktaibtophjuexb
+emwzhyxrwgbpmmicvylxybdtmlyhhckinslsmvcqxtbshekalifpwekmhvhmtvmhrntrxh
+lmfshhdnwnurnshrjgrphwysdpksndfoexihhtntmwdrxhmtfrxxmrkefimlltasoiwhxl
+yasoyegjwutpfnwrnwntgptvnnltbwqdutaqycwihrccjtaentyegmzikellughstvysls
+mvcqxtxhwdurxgnabnhxykhrrwyruemwbpuigkmrkefiwpqgnelpqtxinwdtmlyedrmmwx
+sagxmrdnkiwdyekxbtjegycchsxgltwtaenxvigxbtvevvyiuevshhwrngnxrniluhhawm
+mwrnxwnedrmmwxsagxgpbcaiuiwhxwshweffsrrnmvcqxtbrapiadimwdrxxiurrvinwhg
+ksoewokiwdyekehxqchvltftliwghtplcahsaiwpqouxuxqtaiiglgbruavevvyiiokirp
+ppeindpptehszoepbpyellilqtaenhkafmlhvcaigtlsgsnhhcnvypjabrmifekxuxqfhv
+ghrfvlypwigkucgtaiswdvxwbdznasqirchtylltaxbxvpksvahmuvcrneepucgsmmhhrn
+aeptsrhtihhdtwyruemwbpuigkmrkefiqxwhmlyrdptfcaltrszshtxgnxqgmlyrketxyg
+vtaiwwhammhvsrhfftphtwvthnmlyhxbciwirfbrptvtbkuilogfshhvxvuartailh
+14
+Cryptogram for whom their Student-ID is XXXXXXX6
+pjoymptajsvxkhcftmlklryoixgklvpkmgyapqhrubsvfmlgwxisvxkhcftkiuxpiqampm
+wvhaiqknftliektkgaetbcxgvlgftjolytotpfxkckszbzwgvgvhllckxeulgjxbvgllqp
+hkvtxuhbvhhtkvhyooitxrvwoiffdistxvxckwhrvapecmlgkhwckiztbgzxmpydiatxkh
+ciomiythkvxwwuyvqmshbcmslxkzpkwhrhhgjsoittarimlqkhrahriltmskenmdgwvwqy
+gvgxetvwzbmlgmwvckcqyhvqkivlwrfbrilrysfiuptwcvyuhcrdtvvbrlztvunqasvxuh
+rrzeifedeuemxxsjsvvgmhkvxkqtaftbqretdsgxkgvrgxgtxijvtvkgvjqaioxxjhhtth
+ivqmwgghzhbzgbcwckqcmxfbucfbhkfbfwmxeubxcfdeuwmhytisgxnhrrhbspliysbhgt
+qvvbrfmwzgmieaczenikliyomeptsmskwckntogrqmdshtmpmwvgxgtxirgespzpjgiieb
+uzqgyoutighjuapisllcotecmfgxctcftthbzgxhehbgfhqklxeumlglttfxxkgufffevb
+devhagotiwleotikskshmxdsmlcmxjwgeehbgimevbdeoepalttikiuxrismwjtgzbzwea
+tdstrcwkvfletrdiozvqneftthxxgjokmglbrmaexxtecnkjmxdsmsehbgfhqkltjiyjkv
+xvbmrwfqvflshlwrfxwcgsysgggmdfpmekgiysliektkckmptclbvspwxkwhrceapgxgwk
+tjsvvgmhyokmpzhtvxqgthltymebtehgyouticywjtgvgfeautjhhpggdirxwvkdpswmpt
+afbziphjxviitbducyxkftkvbwkgszqtxgliyomgqgkvbmmqgpcgxgtxijvtvkgvjqaiox
+hdwzlvutzblyhyxtwxrvmdgfhzkwtkvxwgvgvqrshedeuemxxsjsgwkmxmsbrhhgdommqg
+hlqaeutrfbmvcvissmagxckkhgqnckfbiuigfdkmgmpimmvcwtjsvvgmxethvotizcgepw
+hfcgxjxxddeioxckommqgdwgxgtxijvtvkgvjqaioxhkvtxrkdmwwivatjsvvgvnftespz
+azjxhuxrismwcgstcgwkwtiommqgdwfxpgopehivquavaletxhlpciemhftkiuxpiqampi
+gfovxkotjsvvgmhyokmpzhtvxqglwvfsfgkvaokiedxbftaesnboghancxqhrubsvfxhva
+tgfhfnxbjfxkckszbzxjxhvqnvkmnrbwmpmtxfbxahujcfinhcxzbzgwperliplxkwoiux
+rismwunryolgtrekczvciwzqfeumtiyxcuwpkoymnxhgfhttbtkokcvkpusliektkwgjqk
+brhbspxvtcveehargystfjcoxxemwvmaexxpiunifmwrhvspotehbsptajsvvgmhyokmpz
+htvxqglbrmgsvutjiyjkvxvbmjqkiysivqmtthbsphujivlkgufffevbdethvgqpddeikg
+pkcnxqyckvkiuadcrliektkgaetbcxgvlgftrbthxxgjokcpxtugmsehbgfhqkltrheicl
+ikgaetxhzbhvfxgkceickckvxwgvgvhlmpvtkvxefotigtvaapjhaiggizfxpkytkwfiqy
+iysliektkhhqqnckvbwcmirqdwjxbrmuicuavhheriapvbwcmirqdwikpuitpnrdmskenh
+cxdxvkhsftmmoxiyskihhgvthvnhcxzbzgwxethvotizcgxjxeicmiemxfbivqoxuswfav
+dejxrvbdeoewgvgvhllckxeulgjxbvgfeagdkpxwwyuzqbipm
+15
+Cryptogram for whom their Student-ID is XXXXXXX7
+mnzsxbdtrtbveslkqamsvizrfsygzvzgjipryezybumtknmeqcftagdutzqbzpiukrpuik
+uhetgxwiudvzprhacolfqcikbgaacrxndtziqcmnkywsmnrabuarzymqeekzprderxmsgn
+ugurztrrtlpiwlmeqnkgxcdoripretfiwedetzvreswuzftaiklfqcikbfohvsmfroikfn
+ypckiiqrzlqnnlvympdekypndiemaptedkiyxonybuqhftmffprxbvoiggvgetfkvfgrvz
+pnftykgpmnikkbheigcauqlkarorvzdrdiwoioxejkkeqtjnieunxykuqmvyerdeuoapgs
+jklokmrtgbfhvxihfhfxanxtyucttiebmeufzgjyqsvizrfsygzvzgjipryejviefitoxn
+ztjiiaheionlfhvbiyudzzgbrtykqeaweypndejzprkcrtvbfkeuejteknmeatykzcmrko
+kvbaezajutycpbytykgzugyzkbxlrhwemtvzweqcftagdutzbuqsvizrfacywumvvbiyud
+jnieqsknqfbrfhtryijjqfoujymqungajyuccedrdiwoioxejkkeqtjnieunxykuqmvyqa
+ihzipcmrkokvbaezabremkzlmuknweusvjarfaikioxekukbzvztkrqvvxgoadpzpnftyk
+qeehrxmfmrvxmymtvjbbfhvympdekzpnfijovgtejkkeqtikkbzskxcpfiftxumsvzprkc
+rtzroomkzgtejkkeqtvbmamsjauvzgknigfhvjmnxeioauanvybnzdvbmeksygzrtocjme
+detkqiqdtuzeqckypndejzprdezyvbsurxiafevzpnftykarorvzzrooeybegckowabrfz
+wpalgxwiudvybuqoioovzacympdeklwefhvgcgtoioarpsvzwsoocrioarrzqasprxbvoi
+ggvgetygbveauoauanvybcmrkokvbaezunkffutgtefzprdsjubuqyfhbnunrtqahacolf
+qcikbgtijvzbnlvspnebvkvqustaafqdsearheigtngtyuzfunjuurmpgrqpmtzuvfafry
+mpdekypndiemaptedkvbmduobvanrrkbzfzxunfiftbumtriwedetzdnxuvlwefhvympde
+knifnevtzroomkzrpijtmrpeulweqxrsxyqtykjnzkmgcyfdfuzrutykzbbeeyweutuumf
+zokgngqrrtihfhfxqfqdjkbbrprxbvoiggvgehrbmrztvxmqfhvozftaikagtijoaaatkn
+mpmsvongteribvantuvgdocrmqnyrypndeuympdekykuqmvoaquskgvgunvobuqrkourar
+gripqfiuujteikiamuknweusvjarfowviefitoxnztjgxcxyknmvdsygzreffxmkmmgrmv
+rtykkbztiutyqdribvanzybuqaisqasowguveszrmjmrykiqutzylreiigjyqtfniiqcft
+nvdmrzqbzpiowefocgcaohknigfhviwedetzieyiemkbpeygaoqeekvgqrvjifapguarpt
+frmndnztonrtvxbuqmzyavxerxzvhejgbgtekgztqtknigfhvcieterjpnpnfzjrqnrxurp
+16
+Cryptogram for whom their Student-ID is XXXXXXX8
+bvsibykttovmjmhodedbbvsqcgukxvaxchxmqyigyvkmfwohwmpqcaolmjqosjmlmovsnt
+gldiimxwumrmnbfmelshvxbtihlboqmpwgiemyibntmqarcztlwomsnrhzuibnxwkdcdnh
+zzmtvcvlgexsgpaqolfyjnqdignaxkarqumxvmxwighnmwswkxbelolbgoegvyfxeuxvmb
+goxiimxkkdcdnhzzmtvsblceyoferczeqwxibmfzytlizeinahzuwsxlxbajdukmqomdug
+mayygnybzexfyvhdqvhbxvzkthizkiblwwdxgilwwavwytfifbaqwhbxlgexsgbwmmpzsh
+gmisifwkmcywlxvwxpovhkifmbaitzfmqcitvfwhitixxchbxbzelolxlizhdykywdqhbx
+kmcywlxwkdcdnhzzmtvcvmzmrgzhkumxwigtbflsmtfmfmaymameifylntfwoflhkmpzyw
+iidxwuekmeyznltzqxvyglmzxhimamosavbgmdavivttoyzumxaflszbgixvsmnebzshym
+aifmbmhfmesqcxmgavwygmmpgfsimwsvojabkecgnxfaoscjxkifmbaitzfmqcitvfwtck
+lbzisxmhibtzstyczghchgwzxvybkatefyltvptfiwnkqxvybkuahwzbxlelolxlbtibol
+xbtiaiwbnuirmatzqwhizxvqvonxiidxwuekmeyznllqzgsakhcbwqugxftmpcmwqrjslx
+gbexfovmcdigugwzugvykkmxehchgamqchziidxwwbiizxgcfitqqshmtbusbmhyaggvmx
+kdugsmuxkaqsghkmosajexfrsfakhcbwhbtgnavwhwbduhiuelqfmgqhkbtqshmbwzmbam
+aifezghlbmpzcfitqqshmtbusbmhyaagwymrwdmshmxlovmjmhodedbbvakwhyflidipul
+xlardoueqoossvkgbxcmrlbqqgmnvpmwhbxkamxvyxeomqofhkbtircyyqqlsfefiztive
+bkwimxblbdmpombwzwmmmxuflslxaiefsyggwmxhyfibfspulxbtvsmahtpgfsimwsvoja
+bkmpuikbbtqgiglgyqsnkbkovmjmhakwhyfltuosxxleqspmxkdqxkikxiesbmyhzflwmf
+hafilclmqzkwgiemyibntmqargiylwomsnrhzuibnxwkdcdnhzzmtvcvlgexsgltzqfomx
+wwzxvyvhvoidnhyitsaifhzblwwlxkdihmatzurumvamyihbxfiflsgtmqoezmmkcoxilx
+hnflsjnutugyyrvzkthilrafiamtkmmhskntbqvsatklurunaxpaqcghkxtmqjkhxqvhsu
+nbflshhgtursukbbktfiixzfcczmambvwptmmwimwkrxfsgslmmywrixlvaxofehepitcg
+bbusbiylcolobhfwysfjabayeznahcslhbxgmoigmbmgajhbxawysaikipuwajkhxqvhsm
+hqytzyfxvfegivbmfcclbxvfirwkrxfsultipuggslmmylomghbnishikwhirmrfuqxfcv
+vzkthilrafiamtkmzshmnbbmfzyyhzflwminzbsgytlagqsnatbmfohdpqelsmmhceiomr
+fuqxfcvvzkthilrafiavtlmpxvlxlpaprmrlbqqwhhklqvhivhuyybcvtbqawnavcexcgx
+kauxaolmxawgyllaqtoltmmovmjmhodedbbvsqcgwhkzqwdigwqzkhiwbnrifygmkgwhif
+xzeshbxkeuwswnlbaqsllvizvsuwmpqqsmltoqwqiffczmqumxlnihqxxvflsvtgsmrrim
+amdgimmhuqvg
+17
+Cryptogram for whom their Student-ID is XXXXXXX9
+zilooxofekatiodyxjhciqmllokmuiwpcrqesnlcwzrsihsvqnghidrxlpxpoxbbyinshe
+vvxpvrdnrrpcldbjgisdlrvlxstybtxnoksiieuosvrxhnsrnglxisjcnkxehykffxabjr
+bagpvrdfyvdokxglkagyyyhwaqiicxbkbuyrwgkhjkgmlbmussjxnsedaixzgfpnkkkigk
+ghbbtvbrrmpwdofjhnsokzteagfwrqxogrqrwtnsjyhvzabkduemajvblqxipvbbjmdsxb
+byiiijdoitxzvdbvxwrkrrqhjhyobxaafykahmdsionvxycepvhxjhzkyqxogrqrwbjkys
+plmdstybtxnoksbrhbodkwskehpyskkkigwrquafjsfvxmizbrhmkrvmvtaafkrrgkudky
+tvtihyoeitnsdkachpvvbaixzgkrnxvwbeygfxwqtyzqhzokoqfrwgzwcpxpvioflhhrgy
+ymvukzdueyelvnglkagyyyhiwfrwrxxnvfgrzxnqfxfxkqqksakwetwoeigphybrwakzuc
+lwmaajdbwtpwjplhbbtvbrrmjsvnfsywuiyhttprzpsikabkdvqxofvahmkagrcfmzjweq
+qmybsioaxiqpcspoxugkyglxcffecaaeqysfrhpogbngmeqrvfseqhzyawbjqvduilabuo
+emlpvvyaprkbvgusdjcncglxjokeeihbhyozilooxoqilisudfyzcsjdfxaawuonplkzld
+vsgsclvqfxpvrdglxosenrvhbhyovrykfdkgmhjqrxnhwwtvgommohfduifagjktilqqyd
+uempvvcrjxspzdfigwpcoglxcffecxhwqtofwmdszxsskioksbrnoweqglxiskrbhaavrc
+qivervnnrwjcfduikkbvdumlisrxfxaauiyhtawgfxycmkdllymldceocyuhwturctjrkr
+nxbpqrxoinosusagtosjduemwzcwrquafjrnzxpcrmpilohyovrykfdkgmhjgzwhpmwbvy
+hweuojgrpewgzxpelacwozikcsemlegzocvbxaafgyfwbxzvmnwxorvzrrwebxyaaawhkr
+rwxjrvbqivervcuspajvbaslqqyduvxovfvqgkudkyfclpsdrnwuasembrlpflmgiwocwk
+exaatzbfxtphvwcxlkbuofmzjweqglkagyyyhwaqiicxbkbjifxxignoeiuwgvnbrfabkk
+yktisjkahmdsiosskaqfwcpxpscivqinotdvgthoenvrmafrmgmoahyosmkohgbngmeqrv
+nrwjcesaxxnotdvzxpvioflhhruopvrlhzyawrohvwjelebkbbhnysullhxoavngegztik
+aoxhhyovvlyvvwreilzzofxaascqnqthdllymvgspmecipcjifxxi

@@ -1,0 +1,82 @@
+Assignment – Part 2
+
+Advanced Databases and Applications (CP5520)
+
+Study Period TR1, 2024
+
+Due by 5:00 pm on Friday Week 10
+
+3. Transaction Processing
+
+Consider schedules S1 and S2 below.
+
+S1: r3(X), r3(Z), r1(Y), r1(X), w3(Z), r2(Y), w1(X), r2(X), w2(X), r1(Z), w1(Z), r2(Z), w2(Y)
+
+S2: r2(X), r3(Y), r2(Z), w3(Y), r1(X), w2(Z), r1(Y), r3(Z), r1(Z), r2(Y), w2(Y), w3(Z), w1(X), w1(Z)
+
+(a) Apply the basic timestamp ordering (BTO) algorithm to schedules S1 and S2. Determine whether or not the algorithm allows the execution of the schedules, and discuss cascading rollback (if any).
+
+Hints: each operation takes one time unit, and timestamp of each transaction is the time associated to its first operation. For example, timestamps of transactions T1, T2, and T3 in schedule S1 are 3, 6, and 1 (respectively).
+
+[20 marks]
+
+(b) Testing the serializability of S1 and S2 by serialization graph technique to prove that the successful execution of a schedule under BTO will ensure the serializability of the schedule.
+
+[15 marks]
+
+Examine the recoverable characteristic of S1 and S2. What schedule (S1 or S2) can be executed under the strict timestamp ordering (STO) algorithm and write an equivalent strict schedule for it? We assume that a transaction will be be committed or aborted right after its last operation.
+marks]
+4. Deductive Database
+
+Consider a deductive database with the following rules:
+
+REACHABLE(X, Y) :- CITY(X), CITY(Y), FLIGHT(X, Y)
+
+REACHABLE(X, Y) :- CITY(X), CITY(Z), FLIGHT(X, Z), REACHABLE(Z, Y)
+
+Where REACHABLE(X, Y) means that city Y can be reached from city X, and FLIGHT(X, Y) means that there is a flight from city X to city Y (Note: No flight in reverse direction can be automatically assumed).
+
+(a)
+
+Construct fact predicates that describe the following:
+New Delhi (del), Beijing (pek), Saigon (sgn), Auckland (akl), Singapore (sin) and Brisbane (bne) are cities.
+The following 5 flights exist: sin to del, del to pek, pek to sgn, akl to sin and bne to akl (Note: No flight in reverse direction can be automatically assumed). [5 marks]
+Construct a model theoretic interpretation (that is, an interpretation similar to the one shown in Figure 24.13, Lecture Notes) of the above rules using the given facts. [5 marks]
+Is there a guarantee of reachability between any 2 cities? Give reason(s) or example(s) to support your answer. [5 marks]
+(b)
+
+There is 1 new flight added: sgn to bne.
+
+Update the model theoretic interpretation to include the new flight. [5 marks]
+Prove that REACHABLE(pek, akl) is true. Show your work at each step. [5 marks]
+Is there a guarantee of reachability between any 2 cities? Give reason(s) or example(s) to support your answer.
+[5 marks]
+
+(c)
+
+The following predicates are added:
+
+DURATION(del, pek, 6).
+
+DURATION(sin, del, 5.5).
+
+DURATION(sgn, bne, 8).
+
+DURATION(pek, sgn, 5).
+
+DURATION(bne, akl, 3).
+
+DURATION(akl, sin, 10.5).
+
+Note: DURATION(X, Y, Z) means that a flight from X to Y is in Z hours. 5.5 means 5 hours and 30 minutes.
+
+Given a rule named as REACHABLE_AND_DURATION(X, Y, Z):
+
+REACHABLE_AND_DURATION(X, Y, Z) :- FLIGHT(X, Y), DURATION(X, Y, Z)
+
+REACHABLE_AND_DURATION(X, Y, Z) :- FLIGHT(X, T), DURATION(X, T, K), REACHABLE_AND_DURATION(T, Y, H), K+H = Z
+
+The rule means that city Y can be reached from city X and the total hours of flights is Z hours. Assume that we have a built-in comparison predicate “=” which allows us to check equality between 2 arguments. And a built-in arithmetic function “+” that allows us to sum 2 numeric arguments.
+
+Prove that REACHABLE_AND_DURATION(bne, del, 19) is true. Show your work at each step. [10 marks]
+Consider the following query: What cities are reachable in less than 20 hrs of flights from Delhi? Write a new rule and write a query based on that rule (you do not need to prove the query). Assume that we have a built-in comparison predicate “<” which allows us to check inequality between 2 arguments. [10 marks]

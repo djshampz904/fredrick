@@ -1,0 +1,33 @@
+Create a new Excel spreadsheet: Open Excel and create a new blank workbook.
+Input the decision variables: In the first column, list the types of golf holes (Straight par 5, Dogleg par 5, Straight par 4, Dogleg par 4, Long par 3, Short par 3). In the second column, input the number of each type of hole. These are your decision variables (X1, X2, X3, X4, X5, X6).
+Input the parameters: In the next columns, input the parameters for each type of hole, including the par, size taken up by hole, enjoyment index, and building cost.
+Calculate the total enjoyment index: In a separate cell, calculate the total enjoyment index using the formula provided in the mathematical model. This is your objective function.
+Calculate the total cost and total land used: In separate cells, calculate the total cost and total land used based on the decision variables and the parameters.
+Input the constraints: In separate cells, input the constraints provided in the mathematical model. Use Excel formulas to represent these constraints based on the decision variables and the parameters.
+Use Solver to find the optimal solution: Go to the "Data" tab in Excel and click on "Solver". Set the objective to the cell containing the total enjoyment index and set the changing variable cells to the cells containing the decision variables. Add the constraints by selecting the cells containing the constraints and setting them to be equal to, less than or equal to, or greater than or equal to the required values. Click on "Solve" to find the optimal solution.
+Based on the information provided, we can formulate the mathematical model as follows:  Decision Variables:  Let's denote the number of each type of hole as follows:
+X1: Number of Straight par 5 holes
+X2: Number of Dogleg par 5 holes
+X3: Number of Straight par 4 holes
+X4: Number of Dogleg par 4 holes
+X5: Number of Long par 3 holes
+X6: Number of Short par 3 holes
+Objective Function:  The objective is to maximize the golfer enjoyment index. The enjoyment index for each type of hole is given, so the objective function will be:  Maximize E = 2X1 + 1.5X2 + 1.5X3 + 2X4 + 1.75X5 + 2.25X6  If an exclusive clubhouse is built, an additional enjoyment index of 4 is added, so the objective function becomes:  Maximize E = 2X1 + 1.5X2 + 1.5X3 + 2X4 + 1.75X5 + 2.25X6 + 4  Constraints:  The constraints are based on the requirements of the golf course and the limitations of the budget and land. They can be formulated as follows:
+X1 + X2 <= 4 (No more than 4 par 5’s)
+X3 + X4 <= 14 (No more than 14 par 4’s)
+X5 + X6 <= 4 (No more than 4 par 3’s)
+X1 + X2 + X3 + X4 + X5 + X6 = 18 (Total number of holes must be exactly 18)
+5X1 + 5X2 + 4X3 + 4X4 + 3X5 + 3X6 >= 70 (Total par must be at least 70)
+5X1 + 5X2 + 4X3 + 4X4 + 3X5 + 3X6 <= 72 (Total par must be at most 72)
+3X1 + 3.5X2 + 2X3 + 2.5X4 + X5 + 0.75*X6 >= 36 (Total acreage must be at least 36 hectares)
+3X1 + 3.5X2 + 2X3 + 2.5X4 + X5 + 0.75*X6 <= 42 (Total acreage must be at most 42 hectares)
+X1 >= 1 (At least one straight par 5)
+X2 >= 1 (At least one dogleg par 5)
+X3 >= 2 (At least two straight par 4)
+X4 >= 2 (At least two dogleg par 4)
+X5 >= 1 (At least one long par 3)
+X6 >= 1 (At least one short par 3)
+1,000,000X1 + 1,500,000X2 + 750,000X3 + 900,000X4 + 600,000X5 + 650,000X6 <= 20,000,000 - 3,500,000 (Total building cost must be within budget, assuming a standard clubhouse)
+If an exclusive clubhouse is built, the budget constraint changes to:
+1,000,000X1 + 1,500,000X2 + 750,000X3 + 900,000X4 + 600,000X5 + 650,000X6 <= 20,000,000 - 6,000,000 (Total building cost must be within budget, assuming an exclusive clubhouse)
+For the three options, the constraints related to the exclusive clubhouse (size and cost) can be adjusted accordingly.

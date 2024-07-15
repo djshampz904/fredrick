@@ -1,0 +1,116 @@
+Case study
+
+Image result for golf world cairns
+
+Extend Your enjoyment
+Welcome to
+Cunningham Gudgal Golf Resort
+Background Information
+Cunningham Holdings Limited is a diversified family owned business. For more information about the company see the company profile. The Company’s strategic planning is aligned with their Corporate vision “Creating Sustainable Products and Services for Globally Connected Communities”. As part of this vision, the Company is focusing on the development of rural communities. The Company’s requires that key United Nations Sustainable Development goals are included in all planning activities for business innovation. The focus in creating sustainable products and services is underpinned by developing initiatives that:
+
+Have a global Business perspective
+Leverage the power of data and insights
+Build leadership and management skills
+Oscar Cunningham, the CEO of CHL Hospitality subsidiary has suggested to Cunningham Holding’s board that, in conjunction with a Project Manager, CHL Hospitality subsidiary will oversee the management and construction of the Cunningham Gudgal Golf Resort at Charters Towers with a development budget of $20 million.
+
+The CHL Hospitality subsidiary manages 300 hospitality venues located across Australia. The client base for CHL Hospitality varies from business travellers to families and the hospitality venues provide varied accommodation, catering and leisure activities ranging from luxury to economy options. The Golf Course project will not only build Cunningham’s brand and image, but more importantly it will help drive international tourism and stimulate the local economy in which it is located, a regional tropical area that has no current CHL Hospitality venues.
+
+Preliminary enquiries have sourced an appropriately sized block of land of 42 hectares in the Charters Towers area and ascertained that a change of use application was likely to be successful on condition that the development must maintain the natural beauty of the area with no destruction to the environment. This requirement would be well accepted by the company as it aligns with its corporate vision.
+
+The Scenario - Golf Course Requirement
+
+Oscar Cunningham has conducted extensive research to support this Golf Course development proposal. He consulted with designers and managers of golf courses across the world to determine the key criteria required for golf course design and how this translated into attracting golfers into a successful golf resort.
+
+Oscar’s investigations highlighted that one of the main indicators to attract golfers nationally and internationally is the golf course enjoyment index. The enjoyment index is a measure of a golfer’s enjoyment and satisfaction with the golf course design, the difficulty of the holes on the course and the facilities provided.
+
+A recent international survey on golfers and golf course design has revealed the following enjoyment indices associated with the estimated cost of building these par holes.
+
+Kind of golfing hole	Par	Size taken up by hole	Enjoyment Index	Building Cost
+Straight par 5	5	3 hectares	2	$1,000,000
+Dogleg par 5	5	3.5 hectares	1.5	$1,500,000
+Straight par 4	4	2 hectares	1.5	$750,000
+Dogleg par 4	4	2.5 hectares	2	$900,000
+Long par 3	3	1 hectare	1.75	$600,000
+Short par 3	3	0.75 hectare	2.25	$650,000
+A golfing hole is a section of a golf course. Each hole comprises an area called the tee from which golfers start each hole. Golfers strike the ball from the tee and are aiming to move the ball towards a cup at the other end of the hole. The cup is located somewhere on a green, a small area of grass cut short. In between the tee and the green is called the fairway. Golfers aim to keep the ball on the fairway (it is not much fun trying to hit the ball in the trees or lakes on the edge of the fairway). Each strike of the ball is called a stroke. The objective of the game is for the golfer to use as few strokes as possible to get the ball into the cup.
+
+The par of a hole is the number of strokes a golfer should use to move the ball from the tee to the cup. Golf courses usually have par three, four and five holes. A par three hole will require a three par to move the ball to the cup. Similarly, four and five par with require four par and five par respectively. Par three hole is usually shorter than a par four hole. In addition, par four and five holes can have doglegs. A dogleg is a bend in the fairway roughly half way along the hole. Dogleg holes are holes that are built around an obstruction on the land like trees, bushes and lakes. Doglegs add variety and difficulty to the golfing experience, and most courses usually have one or two.
+
+Each hole will take up an area depending upon its length (indicated by par), presence of a dogleg and other factors.
+
+The Cunningham Gudgal Golf Resort will be an international standard 18-hole golf course. Based on the International golf course standard, the new golf course must also meet the following requirements. The course should have at least:
+
+One straight par 5,
+One dogleg par 5,
+Two straight par 4,
+Two dogleg par 4,
+One long par 3, and
+One short par 3.
+The course should have no more than 4 par 5’s.
+The course should have no more than 14 par 4’s.
+The course should have no more than 4 par 3’s.
+The total par must be between 70 and 72.
+The total number of holes must be exactly 18.
+The total acreage must be between 36 and 42 hectares.
+Management’s Plan
+
+The Cunningham Holding management plan is to build an international standard golf course with a standard clubhouse. The standard clubhouse requires a land size of 2 hectare including parking and a construction cost of $3,500,000.
+
+Shareholders request
+
+However, the shareholders request Cunningham Holding’s management to build an exclusive clubhouse. After some discussion with the business community and examining survey results across similar style golf courses, Cunningham Holding’s is considering the shareholder’s request to build an international standard golf course with an exclusive clubhouse. The exclusive clubhouse would add a four (4) enjoyment index. However, the exclusive clubhouse will also cost $6,000,000 and require a land size of 4 hectares including parking.
+
+Modelling task
+
+You are the Cunningham Holdings senior Business Analyst who is working with Oscar Cunningham the CEO of the CHL Hospitality subsidiary. Oscar has requested you to build a decision model that maximises golfer enjoyment and meets all the international golf standards that include a clubhouse.
+
+Your first task is first to build a decision model that meet the management plan – The standard clubhouse golf course model. Oscar Cunningham, the CEO of CHL Hospitality wants to know whether the shareholders’ request can be fulfil. Hence, your second task is to build the exclusive clubhouse golf course model.
+
+If the exclusive clubhouse golf course cannot be constructed (no feasible solution) with current constraints, he has requested you to provide three options for the exclusive clubhouse golf course model for consideration.
+
+For the proposed options to have a feasible solution, you are allowed to make the following changes to the shareholders original exclusive clubhouse specification and budget.
+
+Option 1: you are allowed to reduce the size of the exclusive clubhouse.
+
+Option 2: you are allowed to reduce the construction cost of the exclusive clubhouse, and
+
+Option 3: you are allowed to increase the budget allocation hypothetically.
+
+Note:
+
+Construction costs are estimates only, as this development is rare in rural communities and reliable estimates are not available. Further work will be required if the board accepts the initial proposal.
+The case study is prepared based on the assumption that there is no solution for the original shareholders exclusive clubhouse golf course.
+When you make change to options 1, 2 and 3, the changes MUST be better than the standard clubhouse (management plan). For example, Option 1, when you reduce the size of the exclusive clubhouse, it should be between 2 and 4 hectares.
+Number of golfing holes MUST be INTEGER.
+Requirements
+
+Build decision models for the 18-hole international standard Cunningham Gudgal Golf Resort with a standard clubhouse, the original shareholders’ exclusive clubhouse, and the three options for the exclusive clubhouse (5 decision models).
+Write a 1500-word business report (proposal) to Oscar Cunningham, the CEO of CHL Hospitality outlining your analysis of your decision models and recommendations. Oscar Cunningham will then present your report in the upcoming Board meeting.
+In helping you to prepare the business report, you MUST do the following to provide evidence to support your proposal:
+
+Part 1: Action Plan (30%)
+
+In the action plan you have to describe the process you will undertake to transform the business problem into a set of mathematical equations using the four steps approach.
+
+Identify the decision variables – the unknown values that the model seeks to determine.
+Identify the objective function – the quantity to be minimized or maximized.
+Identify all appropriate constraints – limitations, requirements, or other restrictions that are imposed on any solution, either from practical or technological considerations or by management policy.
+Write the objective function and constraints as mathematical expressions.
+Part 2: Spreadsheet Model Implementation (30%)
+
+Here, it includes the Excel and Solver implementation of your five (5) models.
+
+Standard clubhouse model (management plan)
+Exclusive clubhouse model (shareholder’s request)
+Three (3) options of the exclusive clubhouse model. Clearly state what have changed in each of the option from the original exclusive clubhouse model.
+Part 3: Business Report & Communication (40%)
+
+In the business report, first provide a description of the implementation of your five decision models (the management’s standard clubhouse, the original shareholders’ exclusive clubhouse and the three options for the exclusive clubhouse.
+
+Provide an analysis of the four feasible models (the standard and the three options of the exclusive clubhouse) on their holes configuration, total enjoyment index, total land used and the total construction cost. Discuss the implication on four feasible models whether they meet shareholders’ original exclusive clubhouse requirement.
+
+Make a recommendation to Oscar your proposal model. In doing so you can rank your four feasible models based on international golfing requirement and whether meeting shareholders’ requirement. Justify your recommendation.
+
+Note:
+
+It is possible the standard clubhouse model be your recommended model although it does not meet shareholders requirement, but it may has the best international golfing requirement in terms of golfer enjoyment index, holes configuration and it is the cheapest to construct.

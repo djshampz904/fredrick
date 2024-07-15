@@ -1,0 +1,51 @@
+answers 3(a) Sure, let's break down the process of applying the Basic Timestamp Ordering (BTO) algorithm to schedules S1 and S2 in detail.  The BTO algorithm works by assigning a timestamp to each transaction and ensuring that the transactions execute in timestamp order. If a transaction tries to execute out of order, it is rolled back and restarted.  Here are the steps we'll follow:
+Assign timestamps to each transaction. The timestamp of a transaction is the time associated with its first operation. For example, in schedule S1, the timestamps of transactions T1, T2, and T3 are 3, 6, and 1 respectively.
+Execute the transactions in timestamp order. If a transaction tries to execute out of order, roll it back and restart it.
+Keep track of the read and write timestamps for each data item. The read timestamp (RTS) is the timestamp of the most recent transaction that read the item, and the write timestamp (WTS) is the timestamp of the most recent transaction that wrote the item.
+When a transaction T wants to read an item X, check the WTS of X. If the WTS is greater than the timestamp of T, then T is trying to read a value of X that is written by a future transaction, so roll back and restart T.
+When a transaction T wants to write an item X, check both the RTS and WTS of X. If either is greater than the timestamp of T, then T is trying to write a value of X that has been read or written by a future transaction, so roll back and restart T.
+If T can read or write X without violating the above conditions, update the RTS or WTS of X and continue.
+Repeat steps 4-6 until all transactions are executed.
+Discuss cascading rollback if any. A cascading rollback occurs when the rollback of one transaction forces the rollback of other transactions that have read the data written by the rolled back transaction.
+Now, let's apply these steps to schedules S1 and S2. Note that this is a conceptual process and doesn't involve actual code. The specific steps and results would depend on the exact operations and data items in the schedules.  For schedule S1:  S1: r3(X), r3(Z), r1(Y), r1(X), w3(Z), r2(Y), w1(X), r2(X), w2(X), r1(Z), w1(Z), r2(Z), w2(Y)  The timestamps of transactions T1, T2, and T3 are 3, 6, and 1 respectively.
+Start with the first operation r3(X). Since T3's timestamp is 1, it can read X. Set RTS(X) = 1.
+The next operation is r3(Z). T3 can read Z. Set RTS(Z) = 1.
+The next operation is r1(Y). Since T1's timestamp is 3, it can read Y. Set RTS(Y) = 3.
+The next operation is r1(X). T1 can read X since RTS(X) = 1 < 3. Update RTS(X) = 3.
+The next operation is w3(Z). T3 can write Z since WTS(Z) is not set and RTS(Z) = 1 <= 1. Set WTS(Z) = 1.
+Continue this process for the rest of the operations. If a transaction tries to read or write a data item that has been written by a future transaction, roll it back and restart it.
+For schedule S2, you would follow the same process. Remember to check the read and write timestamps for each data item and roll back and restart transactions as necessary.  This is a manual process and requires careful tracking of the read and write timestamps for each data item. It's also important to understand the rules of the BTO algorithm and apply them correctly.
+
+3(b)	Testing the serializability of S1 and S2 by serialization graph technique to prove that the successful execution of a schedule under BTO will ensure the serializability of the schedule.
+[15 marks]
+a.	Create a node for each transaction in the schedule.
+b.	For each pair of transactions Ti and Tj where Ti executes before Tj, draw an edge from Ti to Tj.
+c.	Check for cycles in the graph. If there are no cycles, the schedule is serializable.
+d.	Let's apply these steps to schedules S1 and S2:
+i.	 For S1: r3(X), r3(Z), r1(Y), r1(X), w3(Z), r2(Y), w1(X), r2(X), w2(X), r1(Z), w1(Z), r2(Z), w2(Y)
+ii.	 Based on the execution order from 3(a), we can draw the edges for each pair of transactions that have a read-write or write-write conflict. For example, if T3 reads X before T1 writes X, draw an edge from T3 to T1.
+iii.	 We repeat this process for all pairs of transactions in S1. Then, check for cycles in the graph. If there are no cycles, S1 is serializable.
+e.	 For S2: r2(X), r3(Y), r2(Z), w3(Y), r1(X), w2(Z), r1(Y), r3(Z), r1(Z), r2(Y), w2(Y), w3(Z), w1(X), w1(Z)  we repeat the same process for S2.
+f.	Draw the edges for each pair of transactions that have a read-write or write-write conflict, then check for cycles in the graph.
+g.	If there are no cycles, S2 is serializable.  Remember, this is a manual process and requires careful tracking of the operations in each transaction and the order in which they execute. It's also important to understand the rules of the serialization graph technique and apply them correctly.
+h.	Now, let's go into more detail about the serialization graph technique:  The serialization graph is a directed graph where each node represents a transaction and each edge represents a conflict between transactions.
+i.	 A conflict occurs when one transaction reads or writes a data item that another transaction later writes.  There are two types of conflicts: read-write (RW) and write-write (WW).
+j.	A RW conflict occurs when a transaction reads a data item that another transaction later writes, and a WW conflict occurs when a transaction writes a data item that another transaction later writes.  When constructing the serialization graph, we draw an edge from Ti to Tj for each RW or WW conflict where Ti executes before Tj.
+k.	This indicates that Ti must execute before Tj to maintain the same order of operations on the conflicting data item.  Once the serialization graph is constructed, we check for cycles. A cycle in the serialization graph indicates a circular dependency between transactions, which means that the schedule is not serializable. If there are no cycles, the schedule is serializable, which means that it is equivalent to some serial schedule of the transactions.  This process ensures that the successful execution of a schedule under the Basic Timestamp Ordering (BTO) algorithm will ensure the serializability of the schedule, as required by question 3(b
+
+
+4(a) i.	% Define the cities
+city(del).
+city(pek).
+city(sgn).
+city(akl).
+city(sin).
+city(bne).
+ii.	% Define the flights
+flight(sin, del).
+flight(del, pek).
+flight(pek, sgn).
+flight(akl, sin).
+flight(bne, akl).
+•	Based on the facts and rules, there isn't a guarantee of reachability between any two cities. The reachability depends on the existence of direct flights or a sequence of flights connecting the cities.  For example, according to the facts provided, there is a direct flight from Singapore (sin) to New Delhi (del), so New Delhi is reachable from Singapore. Similarly, there is a sequence of flights from Singapore to Beijing (pek) via New Delhi, so Beijing is reachable from Singapore.  However, there is no flight from New Delhi (del) to Brisbane (bne) either directly or through a sequence of flights. Therefore, Brisbane is not reachable from New Delhi.  The reachability between any two cities can be determined by querying the REACHABLE (X, Y) predicate in the Prolog program. If the query returns true, then city Y is reachable from city X. If the query returns false, then city Y is not reachable from city X.
+
