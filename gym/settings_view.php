@@ -1,7 +1,16 @@
 <?php
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
+
+}if (isset($_SESSION['success_message'])) {
+    echo '<div class="alert alert-success">' . $_SESSION['success_message'] . '</div>';
+    unset($_SESSION['success_message']);
 }
+if (isset($_SESSION['error_message'])) {
+    echo '<div class="alert alert-danger">' . $_SESSION['error_message'] . '</div>';
+    unset($_SESSION['error_message']);
+}
+
 require_once 'config/settings_update.php';
 ?>
 <!DOCTYPE html>
@@ -30,7 +39,7 @@ require_once 'config/settings_update.php';
     <a href="#"><i class="fas fa-chart-line"></i> Progress Tracker</a>
     <a href="#"><i class="fas fa-file-alt"></i> Reports</a>
     <a href="nutrition_tracker_view.php"><i class="fas fa-utensils"></i> Nutrition Tracker</a>
-    <a href="#"><i class="fas fa-trophy"></i> Challenges</a>
+    <a href="config/challenges.php"><i class="fas fa-trophy"></i> Challenges</a>
     <a href="add_workout.php"><i class="fas fa-dumbbell"></i> Add workout</a>
     <a href="settings_view.php"><i class="fas fa-cog"></i> Settings</a>
     <a href="logout.php"><i class="fas fa-sign-out-alt"></i> Log Out</a>
@@ -107,7 +116,7 @@ require_once 'config/settings_update.php';
                     </div>
                 <?php endforeach; ?>
             <?php endif; ?>
-            <a href="#" class="btn btn-primary">Add New Goal</a>
+            <a href="config/add_goal.php" class="btn btn-primary">Add New Goal</a>
         </div>
     </div>
 </div>

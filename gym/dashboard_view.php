@@ -33,6 +33,7 @@ require_once 'config/dash.php';
     <a href="#"><i class="fas fa-trophy"></i> Challenges</a>
     <a href="add_workout.php"><i class="fas fa-dumbbell"></i> Add workout</a>
     <a href="settings_view.php"><i class="fas fa-cog"></i> Settings</a>
+    <a href="logout.php"><i class="fas fa-sign-out-alt"></i> Log Out</a>
 </div>
 
 <div class="main-content" id="main-content">
