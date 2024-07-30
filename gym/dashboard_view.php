@@ -27,13 +27,10 @@ require_once 'config/dash.php';
         <i class="fas fa-times"></i>
     </button>
     <a href="dashboard_view.php"><i class="fas fa-tachometer-alt"></i> Dashboard</a>
-    <a href="#"><i class="fas fa-chart-line"></i> Progress Tracker</a>
-    <a href="#"><i class="fas fa-file-alt"></i> Reports</a>
     <a href="nutrition_tracker_view.php"><i class="fas fa-utensils"></i> Nutrition Tracker</a>
-    <a href="#"><i class="fas fa-trophy"></i> Challenges</a>
     <a href="add_workout.php"><i class="fas fa-dumbbell"></i> Add workout</a>
     <a href="settings_view.php"><i class="fas fa-cog"></i> Settings</a>
-    <a href="logout.php"><i class="fas fa-sign-out-alt"></i> Log Out</a>
+    <a href="config/logout.php"><i class="fas fa-sign-out-alt"></i> Log Out</a>
 </div>
 
 <div class="main-content" id="main-content">
